@@ -1,13 +1,14 @@
 import { BackgroundLines } from "@/components/ui/background-lines";
+import Logo from "@/components/others/logo";
 
 function Intro() {
   return (
     <div>
       <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          myrProject, <br /> Sajana Textiles.
-        </h2>
-        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+        <div className="z-20 font-bold tracking-tight">
+          <Logo className="text-center text-3xl md:text-6xl lg:text-9xl font-sans py-2 md:py-10" />
+        </div>
+        <p className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center font-semibold">
           Discover the best OS distribution for your needs.
         </p>
       </BackgroundLines>
