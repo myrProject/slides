@@ -4,6 +4,7 @@ import "reveal.js/dist/reveal.css";
 //import "reveal.js/dist/theme/black.css";
 
 import Intro from "@/components/slides/intro";
+import Choices from "@/components/slides/choices";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -30,7 +31,9 @@ function App() {
           <section>
             <Intro />
           </section>
-          <section>Slide 2</section>
+          <section>
+            <Choices />
+          </section>
         </div>
       </div>
     </div>
