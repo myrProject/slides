@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
-//import "reveal.js/dist/theme/black.css";
+//import "reveal.js/dist/theme/white.css";
+import "reveal.js/plugin/highlight/monokai.css";
+import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 
 import Intro from "@/components/slides/intro";
-import Choices from "@/components/slides/choices";
+import Choices from "@/components/slides/os";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -17,6 +19,7 @@ function App() {
       transition: "slide",
       width: "100%",
       height: "100%",
+      plugins: [RevealHighlight],
     });
     deckRef.current.initialize().then(() => {});
   }, []);
