@@ -4,3 +4,4 @@
 ## Useful resources
 [NxxbUI](https://nyxbui.design/docs/)
 [AceternityUI](https://ui.aceternity.com/components/timeline)
+[RevealJs](https://revealjs.com/)
