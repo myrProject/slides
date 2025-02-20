@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://myrproject.github.io/slides/",
+  "homepage": "https://myrproject.github.io/slides",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
