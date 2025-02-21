@@ -6,7 +6,7 @@ import "reveal.js/plugin/highlight/monokai.css";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 
 import Intro from "@/components/slides/intro";
-import Choices from "@/components/slides/os";
+import Os from "@/components/slides/os";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col size-full min-h-screen ">
+    <div className="flex flex-col size-full min-h-screen">
       <div
         className="reveal flex-1 flex items-center justify-center"
         ref={deckDivRef}
@@ -35,7 +35,7 @@ function App() {
             <Intro />
           </section>
           <section>
-            <Choices />
+            <Os />
           </section>
         </div>
       </div>

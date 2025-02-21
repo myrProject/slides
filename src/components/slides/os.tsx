@@ -1,11 +1,35 @@
 import Heading from "@/components/others/heading";
+import { CodeBlock } from "@/components/ui/code-block";
 
-function Intro() {
+function Os() {
+  const code = `{ config, pkgs, ... }:
+  {
+  environment.variables.EDITOR = "vim";
+
+  imports =
+  [ # Include the results of the hardware scan.
+  ./hardware-configuration.nix
+  ];
+
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.kernelPackages = pkgs.linuxPackages_4_19;
+
+  networking.hostName = "nixos"; # Define your hostname.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  `;
+
   return (
     <div>
-      <div className="flex items-center justify-center w-full flex-col px-4 space-y-4 ">
-        <div className="z-20 font-bold tracking-tight">
-          <Heading content="NixOs" />
+      <div className="flex items-center justify-center w-full flex-col px-2 space-y-4">
+        <div className="font-bold tracking-tight">
+          <Heading content="NixOs" className="py-2" />
         </div>
         <div className="flex flex-row justify-between space-x-10">
           <img
@@ -21,45 +45,17 @@ function Intro() {
             <li>Isolated environments</li>
           </ul>
         </div>
-        <pre className="text-left">
-          <code data-trim data-noescape className="hljs yaml">
-            {`{ config, pkgs, ... }:
-
-{
-  environment.variables.EDITOR = "vim";
-
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelPackages = pkgs.linuxPackages_4_19;
-
-  nix.nixPath = [ "nixpkgs=/home/matt/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" "/nix/var/nix/profiles/per-user/root/channels" ];
-
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };`}
-          </code>
-        </pre>
-        <span className="text-center">configuration.nix</span>
+        <div className="text-left px-4">
+          <CodeBlock
+            language="nix"
+            filename="configuration.nix"
+            highlightLines={[9, 13, 14, 18]}
+            code={code}
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-export default Intro;
+export default Os;
