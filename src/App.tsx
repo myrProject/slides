@@ -7,6 +7,7 @@ import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 
 import Intro from "@/components/slides/intro";
 import Os from "@/components/slides/os";
+import Infra from "@/components/slides/infra";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -25,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col size-full min-h-screen">
+    <div className="flex flex-col size-full min-h-screen max-h-screen">
       <div
         className="reveal flex-1 flex items-center justify-center"
         ref={deckDivRef}
@@ -36,6 +37,9 @@ function App() {
           </section>
           <section>
             <Os />
+          </section>
+          <section>
+            <Infra />
           </section>
         </div>
       </div>
