@@ -7,7 +7,10 @@ import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 
 import Intro from "@/components/slides/intro";
 import Os from "@/components/slides/os";
-import Infra from "@/components/slides/infra";
+import OnPremises from "@/components/slides/on-premises";
+import GlobalPlan from "@/components/slides/global-plan";
+import Subject from "@/components/slides/subject";
+import ZeroTrust from "@/components/slides/zero-trust";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -36,10 +39,19 @@ function App() {
             <Intro />
           </section>
           <section>
+            <Subject />
+          </section>
+          <section>
+            <ZeroTrust />
+          </section>
+          <section>
             <Os />
           </section>
           <section>
-            <Infra />
+            <GlobalPlan />
+          </section>
+          <section>
+            <OnPremises />
           </section>
         </div>
       </div>
