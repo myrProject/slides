@@ -4,7 +4,7 @@ function OnPremises() {
     <div>
       <div className="flex items-center justify-center w-full flex-col px-2 space-y-4">
         <div className="flex flex-row justify-between space-x-10">
-          <img src={imgUrl} alt="Infrastructure Plan" />
+          <img src={imgUrl} height={"80%"} alt="Infrastructure Plan" />
         </div>
       </div>
     </div>
