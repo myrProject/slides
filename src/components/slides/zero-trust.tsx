@@ -49,7 +49,7 @@ function ZeroTrust() {
           Built by the
           <a href="https://cyber.gouv.fr/"> ANSSI</a>
         </div>
-        <div className="flex flex-col space-y-2 py-20">
+        <div className="flex flex-col space-y-4 py-20">
           {points.map((point) => (
             <Item key={point.id} id={point.id} content={point.content} />
           ))}

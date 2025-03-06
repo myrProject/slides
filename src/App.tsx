@@ -11,6 +11,8 @@ import OnPremises from "@/components/slides/on-premises";
 import GlobalPlan from "@/components/slides/global-plan";
 import Subject from "@/components/slides/subject";
 import ZeroTrust from "@/components/slides/zero-trust";
+import Cloud from "@/components/slides/cloud";
+import PbOpenings from "@/components/slides/pb-openings";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -48,10 +50,16 @@ function App() {
             <Os />
           </section>
           <section>
+            <Cloud />
+          </section>
+          <section>
             <GlobalPlan />
           </section>
           <section>
             <OnPremises />
+          </section>
+          <section>
+            <PbOpenings />
           </section>
         </div>
       </div>
