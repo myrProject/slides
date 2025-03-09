@@ -1,21 +1,43 @@
 import Heading from "@/components/others/heading";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function PbOpenings() {
   return (
-    <div>
-      <div className="flex items-center justify-center w-full flex-col px-2 space-y-4">
-        <div className="font-bold tracking-tight">
-          <Heading content="Improvements" className="text-5xl" />
-        </div>
-        <div className="flex flex-row justify-between space-x-10">
-          <Heading content="Problems faced" className="text-5xl" />
-
-          <span className="">Licenses ?</span>
-          <span className="">Lack of documentation</span>
-          <span className="">Lack of maturity</span>
-        </div>
-        <div className="text-left px-4"></div>
-      </div>
+    <div className="flex flex-row items-center justify-center w-full px-4 space-x-6">
+      <Card className="w-[600px] border-neutral-200">
+        <CardHeader>
+          <CardTitle>
+            <Heading
+              content="Challenges"
+              className="text-4xl font-semibold text-center"
+            />
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-col space-y-3 text-lg">
+            <span>⚖️ Licensing issues</span>
+            <span>📖 Limited documentation</span>
+            <span>🚧 Lack of maturity</span>
+          </div>
+        </CardContent>
+      </Card>
+      <Card className="w-[600px] border-neutral-200">
+        <CardHeader>
+          <CardTitle>
+            <Heading
+              content="Improvements"
+              className="text-4xl font-semibold text-center"
+            />
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-col space-y-3 text-lg">
+            <span>⚖️ tee</span>
+            <span>📖 tet</span>
+            <span>🚧tete</span>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

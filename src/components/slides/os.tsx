@@ -84,7 +84,7 @@ function Os() {
             <CodeBlock
               language="nix"
               filename="configuration.nix"
-              highlightLines={[9, 13, 14, 18]}
+              highlightLines={[17]}
               code={code}
             />
           </div>
