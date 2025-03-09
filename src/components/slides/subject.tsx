@@ -4,15 +4,15 @@ function Subject() {
   return (
     <div>
       <div className="font-bold tracking-tight">
-        <div className="">
+        <span className="text-xl mb-8">
           An open-source alternative to proprietary operating systems and office
           suites for SMEs, designed with Zero Trust principles.
-        </div>
-        <Heading content="Why ?" className="py-2" />
+        </span>
+        <Heading content="Why ?" className="py-2" /> 🎯 Our Goals
       </div>
       <div className="flex flex-row justify-center space-x-10 text-lg">
         <div className="flex flex-col space-y-2">
-          <div className="font-bold py-2">🎯 Our Goals</div>
+          <div className="font-bold py-2"></div>
           <div className="flex flex-col space-y-2" id="goals">
             <span>Seamless transition from mainstream OS</span>
             <span>Cost-efficient solutions</span>
