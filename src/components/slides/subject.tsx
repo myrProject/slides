@@ -9,14 +9,15 @@ function Subject() {
       <div className="flex flex-row justify-center space-x-10">
         <div className="flex flex-col space-y-2">
           <div className="">
-            Alternative open source à l'OS et à la suite Office pour PME en
-            respectant Zero Trust
+            An open-source alternative to proprietary operating systems and
+            office suites for SMEs, designed with Zero Trust principles.
           </div>
-          <div className="">
+          <div className="flex flex-col" id="goals">
             Justifier le sujet : privé (cout, sécu), public, utilisateur.
+            <span> Minimize costs</span>
+            <span> Increase security</span>
+            <span> Create a high available with data redundancy</span>
           </div>
-          <div className="">Liste services remplacés.</div>
-          <div className="">Licenses ?</div>
         </div>
       </div>
     </div>
