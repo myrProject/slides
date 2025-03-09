@@ -13,6 +13,9 @@ function Intro() {
           company
         </p>
       </BackgroundLines>
+      <div className="absolute bottom-[100px] left-0 w-full z-0 text-xl text-neutral-600">
+        TESTEMALE Yohan, BENZERROUK Mathieu, AUGEREAU Robin
+      </div>
     </div>
   );
 }
