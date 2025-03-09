@@ -32,9 +32,14 @@ function PbOpenings() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col space-y-3 text-lg">
-            <span>⚖️ tee</span>
-            <span>📖 tet</span>
-            <span>🚧tete</span>
+            <span>
+              🪨 Consider using more Cloud Native Computing Foundation projects
+            </span>
+            <span>
+              ⏲️ Test of RTO from data corruption to on-premises cluster
+              disaster
+            </span>
+            <span>🖌️ Improve OS UI/UX </span>
           </div>
         </CardContent>
       </Card>
