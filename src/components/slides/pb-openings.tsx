@@ -10,7 +10,9 @@ function PbOpenings() {
         <div className="flex flex-row justify-between space-x-10">
           <Heading content="Problems faced" className="text-5xl" />
 
-          <div className="">Licenses ?</div>
+          <span className="">Licenses ?</span>
+          <span className="">Lack of documentation</span>
+          <span className="">Lack of maturity</span>
         </div>
         <div className="text-left px-4"></div>
       </div>

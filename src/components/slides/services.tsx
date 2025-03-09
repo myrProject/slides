@@ -17,7 +17,7 @@ function Services() {
           <GhStats username="kanidm" repo="kanidm" />
           <GhStats username="wazuh" repo="wazuh" />
         </div>
-        <Separator className="my-4 h-2 w-full" orientation="vertical" />
+        <Separator className="mx-4 w-[1000px] bg-neutral-400 my-8" />
         <div className="grid grid-cols-5 gap-4">
           <GhStats username="siderolabs" repo="talos" />
           <GhStats username="siderolabs" repo="omni" />

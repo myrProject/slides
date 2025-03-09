@@ -31,7 +31,10 @@ function Os() {
     <div>
       <div className="flex items-center justify-center w-full flex-col px-2 space-y-4">
         <div className="font-bold tracking-tight">
-          <Heading content="NixOs" className="py-2" />
+          <Heading content="NixOs" className="py-0" />
+          <div className="font-normal italic">
+            Chosen among others : Ubuntu, Fedora, Debian, Arch Linux, Kali Linux
+          </div>
         </div>
         <div className="flex flex-row justify-center space-x-10">
           <div className="flex flex-col space-y-2 justify-center">
@@ -47,7 +50,7 @@ function Os() {
             <div className="flex flex-row justify-between space-x-4 py-10">
               <Card className="w-[350px] border-neutral-200">
                 <CardHeader>
-                  <CardTitle>Problems Faced</CardTitle>
+                  <CardTitle>Problem Faced</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>

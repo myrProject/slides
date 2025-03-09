@@ -18,7 +18,10 @@ function Cloud() {
             <GhStats username="siderolabs" repo="omni" />
           </div>
 
-          <Separator orientation="vertical" className="mx-4 h-full" />
+          <Separator
+            orientation="vertical"
+            className="mx-4 h-[400px] bg-neutral-400 my-auto"
+          />
           <div
             id="k8s"
             className="flex flex-row space-x-3 justify-center items-center"

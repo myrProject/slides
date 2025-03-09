@@ -64,10 +64,10 @@ function App() {
             <Public />
           </section>
           <section>
-            <Services />
+            <PbOpenings />
           </section>
           <section>
-            <PbOpenings />
+            <Services />
           </section>
         </div>
       </div>
