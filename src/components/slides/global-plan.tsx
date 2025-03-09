@@ -5,7 +5,7 @@ function GlobalPlan() {
   return (
     <div>
       <div className="font-bold tracking-tight">
-        <Heading content="Architecture Plan" className="py-2" />
+        <Heading content="Enterprise Plan" className="py-2" />
       </div>
       <div className="flex flex-row justify-center space-x-10">
         <img src={imgUrl} alt="Infrastructure Plan" />

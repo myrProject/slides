@@ -7,7 +7,7 @@ type LogoProps = {
 
 export const Heading = ({ className, content }: LogoProps) => {
   return (
-    <div className={cn("size-full text-7xl px-20 py-8", className)}>
+    <div className={cn("size-full text-7xl px-2 py-4", className)}>
       <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 to-green-400 leading-relaxed">
         {content}
       </h1>

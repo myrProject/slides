@@ -44,6 +44,8 @@ function Os() {
             <li>Declarative configuration</li>
             <li>Isolated environments</li>
           </ul>
+          GPG - Repo avec: configuration.nix, configuration.nix.asc et clé
+          publique admin gpg Confidentialité émise car git privé
         </div>
         <div className="text-left px-4">
           <CodeBlock
