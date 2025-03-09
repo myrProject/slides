@@ -5,6 +5,8 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/plugin/highlight/monokai.css";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 
+import Timer from "@/components/others/timer";
+
 import Intro from "@/components/slides/intro";
 import Os from "@/components/slides/os";
 import OnPremises from "@/components/slides/on-premises";
@@ -34,6 +36,7 @@ function App() {
 
   return (
     <div className="flex flex-col size-full min-h-screen max-h-screen">
+      <Timer />
       <div
         className="reveal flex-1 flex items-center justify-center"
         ref={deckDivRef}
