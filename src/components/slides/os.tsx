@@ -1,5 +1,7 @@
 import Heading from "@/components/others/heading";
 import { CodeBlock } from "@/components/ui/code-block";
+import GhStats from "@/components/others/gh-stats";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function Os() {
   const code = `{ config, pkgs, ... }:
@@ -31,29 +33,58 @@ function Os() {
         <div className="font-bold tracking-tight">
           <Heading content="NixOs" className="py-2" />
         </div>
-        <div className="flex flex-row justify-between space-x-10">
-          <img
-            src={
-              "https://github-readme-stats.vercel.app/api/pin/?username=NixOS&repo=nixpkgs"
-            }
-            alt="NixOS GitHub Stats"
-          />
-          <ul className="text-xl text-left list-disc">
-            <li>Based on Linux</li>
-            <li>Reproducible package management</li>
-            <li>Declarative configuration</li>
-            <li>Isolated environments</li>
-          </ul>
-          GPG - Repo avec: configuration.nix, configuration.nix.asc et clé
-          publique admin gpg Confidentialité émise car git privé
-        </div>
-        <div className="text-left px-4">
-          <CodeBlock
-            language="nix"
-            filename="configuration.nix"
-            highlightLines={[9, 13, 14, 18]}
-            code={code}
-          />
+        <div className="flex flex-row justify-center space-x-10">
+          <div className="flex flex-col space-y-2 justify-center">
+            <div className="flex flex-row justify-between space-x-10">
+              <GhStats username="NixOS" repo="nixpkgs" />
+              <ul className="text-xl text-left list-disc">
+                <li>Based on Linux</li>
+                <li>Reproducible package management</li>
+                <li>Declarative configuration</li>
+                <li>Isolated environments</li>
+              </ul>
+            </div>
+            <div className="flex flex-row justify-between space-x-4 py-10">
+              <Card className="w-[350px] border-neutral-200">
+                <CardHeader>
+                  <CardTitle>Problems Faced</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Distributing the configuration.nix file to each employee
+                    laptop while ensuring its integrity, confidentiality, and
+                    non-repudiation.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="w-[350px] border-neutral-200">
+                <CardHeader>
+                  <CardTitle>Solutions</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li>
+                      Using GPG (GNU Privacy Guard) for secure file
+                      distribution:
+                    </li>
+                    <li>
+                      Creating a GitLab repository containing:
+                      configuration.nix, configuration.nix.asc and the
+                      administrator's public GPG key.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          <div className="text-left px-4">
+            <CodeBlock
+              language="nix"
+              filename="configuration.nix"
+              highlightLines={[9, 13, 14, 18]}
+              code={code}
+            />
+          </div>
         </div>
       </div>
     </div>
