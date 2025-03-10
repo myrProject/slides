@@ -14,9 +14,10 @@ function Subject() {
         <div className="flex flex-col space-y-2">
           <div className="font-bold py-2"></div>
           <div className="flex flex-col space-y-2" id="goals">
+            <span>Build a comprehensive system of Open Source projects</span>
             <span>Seamless transition from mainstream OS</span>
-            <span>Cost-efficient solutions</span>
             <span>High availability with data redundancy</span>
+            <span>Cost-efficient solutions</span>
             <span>Enhanced security</span>
           </div>
         </div>
