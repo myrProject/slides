@@ -52,9 +52,6 @@ function App() {
             <ZeroTrust />
           </section>
           <section>
-            <Os />
-          </section>
-          <section>
             <GlobalPlan />
           </section>
           <section>
@@ -65,6 +62,9 @@ function App() {
           </section>
           <section>
             <Public />
+          </section>
+          <section>
+            <Os />
           </section>
           <section>
             <PbOpenings />
