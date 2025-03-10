@@ -33,7 +33,8 @@ function Os() {
         <div className="font-bold tracking-tight">
           <Heading content="NixOs" className="py-0" />
           <div className="font-normal italic">
-            Chosen among others : Ubuntu, Fedora, Debian, Arch Linux, Kali Linux
+            Chosen among others : Alpine Linux, Ubuntu, Fedora, Debian, Arch
+            Linux, Kali Linux, ParrotOS
           </div>
         </div>
         <div className="flex flex-row justify-center space-x-10">
