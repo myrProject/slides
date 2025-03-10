@@ -1,0 +1,8 @@
+Intro : 2-3 min Y | vendor lock-in,
+Zero Trust : 1 min M | 1 ligne par point, lien questions / réponses
+PlanEntreprise : 1-2 min Y | Justif hybride, Plage IP, IPSEC, 3 entrypoints
+Architecture Choices : 3-4 min R | Micro Services, Kubernetees, Choix Talos (Secu, Predictability, Evolvability), GCP - 6 VMs
+OnPremises : 2-3 min R | Traeffik, Observabnility, S3, Postgres, Kanidm, XDR
+CloudPublic : 1 min Y | Scalabilty, S3 in 3rd location
+NixOs : 3-4 min M | Choix OS, Description OS, Cron -> Problem & Solution
+PbOpenings : 1-2 min M |
