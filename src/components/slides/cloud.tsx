@@ -15,18 +15,6 @@ function Cloud() {
           </span>
           <div className="flex flex-row justify-between space-x-10">
             <div
-              id="talos-omni"
-              className="flex flex-col space-y-3 justify-center"
-            >
-              <GhStats username="siderolabs" repo="talos" />
-              <GhStats username="siderolabs" repo="omni" />
-            </div>
-
-            <Separator
-              orientation="vertical"
-              className="mx-4 h-[400px] bg-neutral-400 my-auto"
-            />
-            <div
               id="k8s"
               className="flex flex-row space-x-3 justify-center items-center"
             >
@@ -44,6 +32,18 @@ function Cloud() {
                 src="https://i.redd.it/2gzc189byt921.png"
                 className="w-1/2"
               />
+            </div>
+
+            <Separator
+              orientation="vertical"
+              className="mx-4 h-[400px] bg-neutral-400 my-auto"
+            />
+            <div
+              id="talos-omni"
+              className="flex flex-col space-y-3 justify-center"
+            >
+              <GhStats username="siderolabs" repo="talos" />
+              <GhStats username="siderolabs" repo="omni" />
             </div>
           </div>
         </div>
