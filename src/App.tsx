@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
 //import "reveal.js/dist/theme/white.css";
@@ -20,23 +20,34 @@ import Services from "@/components/slides/services";
 
 function App() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
-  const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
+  const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instancety
+  const [currentSlide, setCurrentSlide] = useState(0); // Current slide index
 
   useEffect(() => {
-    // Prevents double initialization in strict mode
-    if (deckRef.current) return;
-    deckRef.current = new Reveal(deckDivRef.current!, {
+    // Prevents double initialization
+    if (!deckDivRef.current || deckRef.current) return;
+
+    deckRef.current = new Reveal(deckDivRef.current, {
       transition: "slide",
       width: "100%",
       height: "100%",
       plugins: [RevealHighlight],
     });
-    deckRef.current.initialize().then(() => {});
+
+    deckRef.current.on("slidechanged", (event) => {
+      // Handle slide changes
+      console.log("Slide changed:", event.indexh);
+      setCurrentSlide(event.indexh);
+    });
+
+    deckRef.current.initialize().then(() => {
+      console.log("Reveal.js initialized");
+    });
   }, []);
 
   return (
     <div className="flex flex-col size-full min-h-screen max-h-screen">
-      <Timer />
+      <Timer slideIndex={currentSlide} />
       <div
         className="reveal flex-1 flex items-center justify-center"
         ref={deckDivRef}
