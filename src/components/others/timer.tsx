@@ -1,20 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
-function Timer() {
-  const [timer, setTimer] = useState(0); // state for the timer
-  const [isTimerVisible, setIsTimerVisible] = useState(false); // state to control badge visibility
-  const timerRef = useRef<NodeJS.Timeout | null>(null); // reference to the timer interval
+type TimerProps = {
+  slideIndex: number; // Slide index received as a prop
+};
 
-  // Function to start the timer
+function Timer({ slideIndex }: TimerProps) {
+  const [timer, setTimer] = useState(0);
+  const [isTimerVisible, setIsTimerVisible] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const DurationPerSlides = [180, 180, 240, 360, 600, 780, 840, 1080, 1200];
+  const currentThreshold = DurationPerSlides[slideIndex] || 60; // Default to 60s if out of range
+
+  // Track if timer has exceeded threshold
+  const isTimerPassed = timer >= currentThreshold;
+
+  // Start the timer
   const startTimer = () => {
-    if (timerRef.current) return; // Prevent multiple intervals
+    if (timerRef.current) return;
     timerRef.current = setInterval(() => {
       setTimer((prevTimer) => prevTimer + 1);
-    }, 1000); // Increment every second
+    }, 1000);
   };
 
-  // Function to stop the timer
+  // Stop the timer
   const stopTimer = () => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
@@ -22,31 +33,36 @@ function Timer() {
     }
   };
 
-  // Handle keydown events
+  // Keydown events
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "x" || event.key === "X") {
-        setIsTimerVisible((prev) => !prev); // Toggle visibility
+      if (event.key.toLowerCase() === "x") {
+        setIsTimerVisible((prev) => !prev);
       }
-
-      if (event.key === "c" || event.key === "C") {
-        stopTimer(); // Stop the timer before resetting
-        setTimer(0); // Reset timer to 0
-        startTimer(); // Restart the timer if it was running
+      if (event.key.toLowerCase() === "c") {
+        stopTimer();
+        setTimer(0);
+        startTimer();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      stopTimer(); // Cleanup timer on unmount
+      stopTimer();
     };
-  }, []); // Add isTimerRunning as a dependency
+  }, []);
 
   return (
     <>
       {isTimerVisible && (
-        <Badge variant="default" className="z-20 absolute top-0 right-0 m-4">
+        <Badge
+          variant="default"
+          className={cn(
+            "z-20 absolute top-0 right-0 m-4 text-white",
+            isTimerPassed ? "text-red-500" : "text-green-500",
+          )}
+        >
           {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, "0")}
         </Badge>
       )}
